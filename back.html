@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="back.css">
+</head>
+
+<body>
+
+    <table class="table">
+
+        <tbody>
+            <tr>
+
+                <td>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <label for="brand">Brand</label>
+                        <input type="text" name="brand" id="brand">
+                    </div>
+                    <div>
+                        <label for="imageUrl">imageUrl</label>
+                        <input type="text" name="imageUrl" id="imageUrl">
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price">
+                    </div>
+                    <div>
+                        <button id="btn" onclick="aggiungiProdotto()">CREA PRODOTTO</button>
+                    </div>
+                </td>
+                <div id="">
+                    <td id="prodottiAggiunti">
+                        
+    
+                    </td>
+                </div>
+
+            </tr>
+        </tbody>
+    </table>
+
+<!--     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> -->
+            
+
+
+    <div id="modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="chiudiModal()"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+
+                <div class="modal-footer">
+
+
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="chiudiModal()">Close</button>
+                    <div class="btn-wrapper" id="modal-footer">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inserisci le modifiche</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="chiudiModal()"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+                        <label for="name_modifica">Name</label>
+                        <input type="text" name="name_modifica" id="name_modifica">
+                        <input type="text" name="id_mod" id="id_mod" class="d-none">
+                    </div>
+
+
+                    <div>
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description_modifica">
+                    </div>
+                    <div>
+                        <label for="brand">Brand</label>
+                        <input type="text" name="brand" id="brand_modifica">
+                    </div>
+                    <div>
+                        <label for="imageUrl">imageUrl</label>
+                        <input type="text" name="imageUrl" id="imageUrl_modifica">
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price_modifica">
+                    </div>
+                    <div>
+                        <button id="btn" onclick="modificaProdotto()">MODIFICA PRODOTTO</button>
+                    </div>
+                </div>
+
+                
+
+                <div class="modal-footer">
+
+
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="chiudiModal()">Close</button>
+                    <div class="btn-wrapper" id="modal-footer">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay d-none">
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="back.js"></script>
+</body>
+
+</html>
