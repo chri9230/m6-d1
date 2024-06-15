@@ -81,6 +81,7 @@ function renderElementi () {
 
                             <tr>
                             <th scope="row">${counter}</th>
+                            <td>${element._id}</td>
                             <td>${element.brand}</td>
                             <td>${element.name}</td>
                             <td>${element.description}</td>

@@ -26,6 +26,7 @@ function displayProducts() {
                         <p class="card-text">${element.description}</p>
                         <p class="card-text"><u><i>${element.price} €</i></u></p>
                         <a href="#" class="btn btn-primary" onclick='addCart("${element.name}","${element.price}")'>Add Cart</a>
+                        <a href="./more.html?_id=${element._id}" class="btn btn-primary" >More Info</a>
                     </div>
                 </div>
 

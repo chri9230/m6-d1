@@ -1,0 +1,23 @@
+#card {
+    
+    margin-top: 6em;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.row > div {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img img {
+    max-width: 500px;
+}
+
+#dex {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
