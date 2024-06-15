@@ -32,6 +32,7 @@ function aggiungiProdotto() {
                 renderModal("Complimenti", "prodotto caricato correttamente")
                 renderElementi ()
                 pulisciModal()
+                
             } else {
                 renderModal("Attenzione !", "Articolo già in magazzino")
             }
@@ -79,7 +80,7 @@ function renderElementi () {
                             `
 
                             <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">${element._id}</th>
                             <td>${element.brand}</td>
                             <td>${element.name}</td>
                             <td>${element.description}</td>
@@ -97,7 +98,7 @@ function renderElementi () {
 
                             
                             `
-
+                            
                         //console.log(scatolaProdotti)
                     });
                 })
@@ -239,3 +240,4 @@ function renderModal (title, message, ok, cancel) {
     // <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     //           <button type="button" class="btn btn-primary">Save changes</button>
 }
+
