@@ -1,7 +1,6 @@
 
 let scatolaProdotti = document.getElementById('prodottiAggiunti')
 
-
 // DEFINISCO LA FUNZIONE PER PRENDERE I VALORI INSERITI NEGLI INPUT E TRAMITE IL METODO POST VADO AD AGGIUNGERLI ALL'ENDPOINT 
 function aggiungiProdotto() {
     
@@ -72,6 +71,7 @@ function renderElementi () {
             response.json()
                 .then(data => {
                     scatolaProdotti.innerHTML = ''
+                    let counter = 1; 
                     data.forEach(element => {
                         //console.log(element)
                         
@@ -80,7 +80,7 @@ function renderElementi () {
                             `
 
                             <tr>
-                            <th scope="row">${element._id}</th>
+                            <th scope="row">${counter}</th>
                             <td>${element.brand}</td>
                             <td>${element.name}</td>
                             <td>${element.description}</td>
@@ -98,7 +98,7 @@ function renderElementi () {
 
                             
                             `
-                            
+                            counter ++
                         //console.log(scatolaProdotti)
                     });
                 })
