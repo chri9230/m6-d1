@@ -31,7 +31,7 @@ function aggiungiProdotto() {
             if (response.status === 200) {
                 renderModal("Complimenti", "prodotto caricato correttamente")
                 renderElementi ()
-                
+                pulisciModal()
             } else {
                 renderModal("Attenzione !", "Articolo già in magazzino")
             }
@@ -39,6 +39,16 @@ function aggiungiProdotto() {
     } else {
         renderModal("Attenzione !", "Non hai completato tutti i campi")
     }
+}
+
+// DEFINISCO UNA FUNZIONE PER PULIRE I CAMPI INPUT UNA VOLTA INSERITE IL PRODOTTO
+
+function pulisciModal() {
+    document.getElementById('name').value = ''
+    document.getElementById('description').value = ''
+    document.getElementById('brand').value = ''
+    document.getElementById('imageUrl').value = ''
+    document.getElementById('price').value = ''
 }
 
 // AL CARICAMENTO DELLA PAGINA RICHIAMO LA FUNZIONE CHE MI RENDERIZZA I DATI PRECEDENTEMENTE INSERITI TRAMITE LA POST 
