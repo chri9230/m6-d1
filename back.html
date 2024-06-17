@@ -40,7 +40,7 @@
                             <input type="number" name="price" id="price">
                         </div>
                         <div class="form">
-                            <button id="btn" onclick="aggiungiProdotto()">CREA PRODOTTO</button>
+                            <button id="btn" onclick="aggiungiProdotto()">CREATE PRODUCT</button>
                         </div>
                     </div>
                 </td>
@@ -52,8 +52,8 @@
                                     <th scope="col">#</th>
                                     <th scope="col">ID</th>
                                     <th scope="col">BRAND</th>
-                                    <th scope="col">ARTICOLO</th>
-                                    <th scope="col">DESCRIZIONE</th>
+                                    <th scope="col">ARTICLE</th>
+                                    <th scope="col">DESCRIPTION</th>
                                 </tr>
                             </thead>
                             <tbody id="prodottiAggiunti">
@@ -73,16 +73,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Deleting element</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                         onclick="chiudiModal()"></button>
                 </div>
+                
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <p>Are you sure to delete this product ?</p>
                 </div>
 
                 <div class="modal-footer">
-
 
 
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
@@ -100,7 +100,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Inserisci le modifiche</h5>
+                    <h5 class="modal-title">INSERT YOUR CHANGES</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                         onclick="chiudiModal()"></button>
                 </div>
@@ -129,16 +129,16 @@
                         <label for="price">Price</label>
                         <input type="number" name="price" id="price_modifica">
                     </div>
-                    <div>
-                        <button id="btn" onclick="modificaProdotto()">MODIFICA PRODOTTO</button>
-                    </div>
+                    
                 </div>
 
 
 
                 <div class="modal-footer">
 
-
+                    <div>
+                        <button class="btn btn-primary" id="btn" onclick="modificaProdotto()">EDIT</button>
+                    </div>
 
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                         onclick="chiudiModal()">Close</button>

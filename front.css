@@ -1,22 +1,48 @@
 .card img {
     margin: 0 auto;
     width: 100%;
-    
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
+    padding: 1em;
+    max-height: 230px;
 }
 
 .card {
     max-width: 25%;
 }
 
+#carrello {
+    margin-top: 2em;
+    height: 100vh;
+    
+}
+
 #head {
+    
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+#listaCarrello li {
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#listaCarrello li svg {
+    cursor: pointer;
+    transition: transform .6s;
+}
+#listaCarrello li svg:hover {
+    
+    transform: scale(1.2);
+}
+
+
 #head p {
     margin: 0;
 }
+
+

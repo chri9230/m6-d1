@@ -28,7 +28,7 @@ function aggiungiProdotto() {
     })
         .then(response => {
             if (response.status === 200) {
-                renderModal("Complimenti", "prodotto caricato correttamente")
+                renderModal("Carimento effettuato", "Prodotto caricato correttamente")
                 renderElementi ()
                 pulisciModal()
                 
@@ -177,7 +177,7 @@ function rimuovi(id) {
     modalFooter.innerHTML = ''
     modalFooter.innerHTML +=
     `
-    <button type="button" class="btn btn-primary" onclick="(confermaEliminazione('${id}'))">Confirm elimination</button>
+    <button type="button" class="btn btn-primary" onclick="(confermaEliminazione('${id}'))">DELETE</button>
     `
 
     let getModal = document.getElementById('modal')

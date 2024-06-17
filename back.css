@@ -13,7 +13,6 @@
     width: 10%;
     padding-left: .3em;
     text-align: center;
-    
 }
 
 .form {
@@ -22,8 +21,14 @@
 
 input {
     transition: background-color .8s;
+    
 }
 
-input:hover {
+input:hover, select:hover {
     background-color: yellow;
+}
+
+.modal-body label  {
+    width: 100px;
+    
 }
